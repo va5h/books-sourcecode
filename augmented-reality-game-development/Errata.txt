@@ -1,0 +1,30 @@
+Errata
+
+- 2 submitted: last submission 24 Mar 2017 
+
+Errata type: Typo Page no: 251
+
+This: Obviously, you are free to modify this gam mechanic in any manner you like.
+
+Should be: Obviously, you are free to modify this game mechanic in any manner you like.
+
+Errata Type: Technical, Page number 187 PDF:
+
+It is:
+
+From the Assets/FoodyGo/Scripts/Services folder, drag the Inventory script onto the Inventory object.
+
+Should be:
+
+From the Assets/FoodyGo/Scripts/Services folder, drag the InventoryService.cs script onto the Inventory object.
+
+
+Errata Type: Technical, Page number 189 PDF:
+
+It is:
+
+Reopen the game and review the output again on the CURLR console
+
+Should be:
+
+Reopen the game and review the output again on the CUDLR console
