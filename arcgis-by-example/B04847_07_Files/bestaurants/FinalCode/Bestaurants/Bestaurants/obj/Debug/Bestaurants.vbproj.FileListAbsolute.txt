@@ -1,0 +1,11 @@
+C:\ArcGISByExample\bestaurants\Code\Bestaurants\Bestaurants\bin\Debug\Bestaurants.dll
+C:\ArcGISByExample\bestaurants\Code\Bestaurants\Bestaurants\bin\Debug\Bestaurants.pdb
+C:\ArcGISByExample\bestaurants\Code\Bestaurants\Bestaurants\bin\Debug\Bestaurants.xml
+C:\ArcGISByExample\bestaurants\Code\Bestaurants\Bestaurants\obj\Debug\Bestaurants.Resources.resources
+C:\ArcGISByExample\bestaurants\Code\Bestaurants\Bestaurants\obj\Debug\Bestaurants.vbproj.GenerateResource.Cache
+C:\ArcGISByExample\bestaurants\Code\Bestaurants\Bestaurants\obj\Debug\Bestaurants.dll
+C:\ArcGISByExample\bestaurants\Code\Bestaurants\Bestaurants\obj\Debug\Bestaurants.xml
+C:\ArcGISByExample\bestaurants\Code\Bestaurants\Bestaurants\obj\Debug\Bestaurants.pdb
+C:\ArcGISByExample\bestaurants\Code\Bestaurants\Bestaurants\bin\Debug\Bestaurants.tlb
+C:\ArcGISByExample\bestaurants\Code\Bestaurants\Bestaurants\obj\Debug\Bestaurants.frmRestaurantviewer.resources
+C:\ArcGISByExample\bestaurants\Code\Bestaurants\Bestaurants\obj\Debug\Bestaurants.txtSearchform.resources

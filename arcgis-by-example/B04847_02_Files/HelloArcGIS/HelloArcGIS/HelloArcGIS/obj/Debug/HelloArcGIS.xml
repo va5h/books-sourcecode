@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+HelloArcGIS
+</name>
+</assembly>
+<members>
+<member name="P:HelloArcGIS.My.ThisAddIn.IDs.Button">
+	<summary>
+Returns 'HelloArcGIS_Button', the id declared for Add-in Button class 'Button'
+</summary>
+</member><member name="P:HelloArcGIS.My.ThisAddIn.IDs.btnHelloArcGIS">
+	<summary>
+Returns 'HelloArcGIS_btnHelloArcGIS', the id declared for Add-in Button class 'btnHelloArcGIS'
+</summary>
+</member><member name="T:HelloArcGIS.My.ThisAddIn.IDs">
+	<summary>
+A class for looking up Add-in id strings declared in the associated configuration xml file (.esriaddinx).
+</summary>
+</member><member name="T:HelloArcGIS.My.ThisAddIn">
+	<summary>
+A class for looking up declarative information in the associated configuration xml file (.esriaddinx).
+</summary>
+</member><member name="M:HelloArcGIS.My.Internal.AddInStartupObject.GetThis">
+	<summary>
+ Expose this instance of Add-in class externally
+ </summary>
+</member><member name="P:HelloArcGIS.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:HelloArcGIS.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:HelloArcGIS.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

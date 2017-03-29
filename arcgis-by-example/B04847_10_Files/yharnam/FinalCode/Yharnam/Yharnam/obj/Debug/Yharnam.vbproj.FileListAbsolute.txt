@@ -1,0 +1,12 @@
+C:\ArcGISByExample\yharnam\Code\Yharnam\Yharnam\bin\Debug\Yharnam.dll
+C:\ArcGISByExample\yharnam\Code\Yharnam\Yharnam\bin\Debug\Yharnam.pdb
+C:\ArcGISByExample\yharnam\Code\Yharnam\Yharnam\bin\Debug\Yharnam.xml
+C:\ArcGISByExample\yharnam\Code\Yharnam\Yharnam\bin\Debug\Yharnam.tlb
+C:\ArcGISByExample\yharnam\Code\Yharnam\Yharnam\obj\Debug\Yharnam.frmExcavationEditor.resources
+C:\ArcGISByExample\yharnam\Code\Yharnam\Yharnam\obj\Debug\Yharnam.Resources.resources
+C:\ArcGISByExample\yharnam\Code\Yharnam\Yharnam\obj\Debug\Yharnam.vbproj.GenerateResource.Cache
+C:\ArcGISByExample\yharnam\Code\Yharnam\Yharnam\obj\Debug\Yharnam.dll
+C:\ArcGISByExample\yharnam\Code\Yharnam\Yharnam\obj\Debug\Yharnam.xml
+C:\ArcGISByExample\yharnam\Code\Yharnam\Yharnam\obj\Debug\Yharnam.pdb
+C:\ArcGISByExample\yharnam\Code\Yharnam\Yharnam\obj\Debug\Yharnam.frmDesignManager.resources
+C:\ArcGISByExample\yharnam\Code\Yharnam\Yharnam\obj\Debug\Yharnam.frmSearchDesign.resources

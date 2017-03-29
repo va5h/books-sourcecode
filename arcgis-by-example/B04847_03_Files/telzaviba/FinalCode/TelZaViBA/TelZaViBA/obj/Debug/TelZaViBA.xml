@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+TelZaViBA
+</name>
+</assembly>
+<members>
+<member name="P:TelZaViBA.My.ThisAddIn.IDs.btnShowTowerRange">
+	<summary>
+Returns 'TelZaViBA_btnShowTowerRange', the id declared for Add-in Button class 'btnShowTowerRange'
+</summary>
+</member><member name="P:TelZaViBA.My.ThisAddIn.IDs.tlFindClosestTower">
+	<summary>
+Returns 'TelZaViBA_tlFindClosestTower', the id declared for Add-in Tool class 'tlFindClosestTower'
+</summary>
+</member><member name="T:TelZaViBA.My.ThisAddIn.IDs">
+	<summary>
+A class for looking up Add-in id strings declared in the associated configuration xml file (.esriaddinx).
+</summary>
+</member><member name="T:TelZaViBA.My.ThisAddIn">
+	<summary>
+A class for looking up declarative information in the associated configuration xml file (.esriaddinx).
+</summary>
+</member><member name="M:TelZaViBA.My.Internal.AddInStartupObject.GetThis">
+	<summary>
+ Expose this instance of Add-in class externally
+ </summary>
+</member><member name="P:TelZaViBA.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:TelZaViBA.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:TelZaViBA.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

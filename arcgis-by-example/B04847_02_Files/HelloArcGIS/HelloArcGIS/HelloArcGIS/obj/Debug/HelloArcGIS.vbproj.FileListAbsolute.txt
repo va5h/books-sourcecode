@@ -1,0 +1,9 @@
+C:\ArcGISByExample\HelloArcGIS\HelloArcGIS\HelloArcGIS\bin\Debug\HelloArcGIS.dll
+C:\ArcGISByExample\HelloArcGIS\HelloArcGIS\HelloArcGIS\bin\Debug\HelloArcGIS.pdb
+C:\ArcGISByExample\HelloArcGIS\HelloArcGIS\HelloArcGIS\bin\Debug\HelloArcGIS.xml
+C:\ArcGISByExample\HelloArcGIS\HelloArcGIS\HelloArcGIS\obj\Debug\HelloArcGIS.Resources.resources
+C:\ArcGISByExample\HelloArcGIS\HelloArcGIS\HelloArcGIS\obj\Debug\HelloArcGIS.vbproj.GenerateResource.Cache
+C:\ArcGISByExample\HelloArcGIS\HelloArcGIS\HelloArcGIS\obj\Debug\HelloArcGIS.dll
+C:\ArcGISByExample\HelloArcGIS\HelloArcGIS\HelloArcGIS\obj\Debug\HelloArcGIS.xml
+C:\ArcGISByExample\HelloArcGIS\HelloArcGIS\HelloArcGIS\obj\Debug\HelloArcGIS.pdb
+C:\ArcGISByExample\HelloArcGIS\HelloArcGIS\HelloArcGIS\bin\Debug\HelloArcGIS.esriAddIn

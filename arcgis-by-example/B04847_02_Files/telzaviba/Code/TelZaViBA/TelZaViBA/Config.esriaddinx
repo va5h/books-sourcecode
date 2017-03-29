@@ -1,0 +1,30 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>TelZaViBA</Name>
+  <AddInID>{afea073d-054c-498a-862a-65a27839ed5a}</AddInID>
+  <Description>This is the TelZaViBA project template designed for ArcGIS By Example book</Description>
+  <Version>1.0</Version>
+  <Image>Images\TelZaViBA.png</Image>
+  <Author>Hussein</Author>
+  <Company></Company>
+  <Date>5/3/2015</Date>
+  <Targets>
+    <Target name="Desktop" version="10.3" />
+  </Targets>
+  <AddIn language="CLR4.0" library="TelZaViBA.dll" namespace="TelZaViBA">
+    <ArcMap>
+      <Toolbars>
+       
+        <Toolbar id="TelZaViBA_Cell_Tower_Analysis" caption="Cell Tower Analysis Tool" showInitially="false">
+          <Items>
+            <Item refID="TelZaViBA_btnShowTowerRange" />
+          </Items>
+        </Toolbar>
+        
+      </Toolbars>
+      
+      <Commands>
+        <Button id="TelZaViBA_btnShowTowerRange" class="btnShowTowerRange" message="When click it will show the range of all towers in the map" caption="Show Tower Range" tip="When click it will show the range of all towers in the map" category="TelZaViBa" image="Images\btnShowTowerRange.png" />
+      </Commands>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>
