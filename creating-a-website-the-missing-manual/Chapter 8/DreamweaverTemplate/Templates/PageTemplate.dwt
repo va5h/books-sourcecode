@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <!-- TemplateBeginEditable name="title" -->
+  <title></title>
+  <!-- TemplateEndEditable -->
+
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+
+<body>
+  <div class="Header">
+    <img src="TemplatesRule.jpg" alt="Templates Rule!" />
+  </div>
+
+  <div class="MenuPanel">
+    <h1>Menu</h1>
+    <p>
+      <a href="">Page 1</a><br />
+      <a href="">Page 2</a><br />
+      <a href="">Page 3</a><br />
+      <a href="">The End</a>
+    </p>
+  </div>
+
+  <!-- TemplateBeginEditable name="content" -->
+  <div class="ContentPanel">
+  </div>
+  <!-- TemplateEndEditable -->
+
+</body>
+</html>

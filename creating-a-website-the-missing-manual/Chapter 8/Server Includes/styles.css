@@ -1,0 +1,46 @@
+body {
+  font-family: verdana, sans-serif;
+  font-size: small;
+}
+.Header {
+  text-align: center;
+  font-family: Georgia, "Times New Roman";
+  margin-bottom: 10px;
+}
+.Header h1 {
+  font-size: xx-large;
+}
+.MenuPanel {
+  position: absolute;
+  left: 10px;
+  width: 150px;
+  /**background-color:#eee;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;**/
+  padding-bottom: 8px;
+}
+.MenuPanel h1
+{
+  background-color: black;
+  color: white;
+  font-size: medium;
+  padding: 6px;
+  margin-bottom: 3px;
+  margin-top: 0px;
+}
+.MenuPanel a
+{
+  margin: 6px;
+}
+.MenuPanel p
+{
+  margin: 6px;
+}
+
+.ContentPanel {
+  margin-left: 151px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+

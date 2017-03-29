@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+<title>Layering</title>
+<style>
+.Back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 150px;
+  height: 100px;
+  background-color: orange;
+  z-index: 0;
+  border-style: dotted;
+  border-width: 1px;
+}
+.Front {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 230px;
+  height: 180px;
+  z-index: 1;
+  font-size: 50px;
+  border-style: dotted;
+  border-width: 3px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="Back">
+
+</div>
+<div class="Front">
+This text is on top.
+</div>
+</body>
+
+</html>

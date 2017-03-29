@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Origami Sales</title>
+<style>
+body {
+  font-size: small;
+  font-family: Verdana;
+}
+h1 {
+  font-size: large;
+}
+.float {
+  float: left;
+  margin-right: 20px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="formatted">
+<h1>Handmade Origami Socks</h1>
+<p><img border="0" src="origami.jpg" class="float">You've waited and they're finally here. Order your own
+pair of origami socks for only $26.95 and get them in time
+for the holidays. What better way to show your loved ones how
+poor your gift giving judgement really is?</p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+  <input type="hidden" name="cmd" value="_xclick">
+  <input type="hidden" name="business" value="matthewpmacdonald@hotmail.com">
+  <input type="hidden" name="item_name" value="Handmade Origami Socks">
+  <input type="hidden" name="item_number" value="HOS-001">
+  <input type="hidden" name="amount" value="26.95">
+  <input type="hidden" name="no_note" value="1">
+  <input type="hidden" name="currency_code" value="USD">
+
+
+  <input type="hidden" name="on0" value="Color">Color
+  <select name="os0">
+    <option value="Yellow">Yellow
+    <option value="Green">Green
+    <option value="Tomato">Tomato
+    <option value="Chartreuse">Chartreuse
+  </select>
+
+  <input type="image" style="vertical-align: bottom" src="https://www.paypal.com/en_US/i/btn/x-click-but23.gif"
+   border="0" name="submit" alt="Make payments with PayPal">
+</form>
+</div>
+</html>

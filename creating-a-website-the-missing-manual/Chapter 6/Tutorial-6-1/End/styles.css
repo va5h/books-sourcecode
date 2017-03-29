@@ -1,0 +1,17 @@
+/* Set the font for the whole page. */
+body {
+  font-family: Century Gothic,sans-serif;
+  font-size: small;
+}
+
+.float {
+  float: left;
+  margin-right: 20px;
+}
+
+/* Format the heading with a background color. */
+h1 {
+  background-color: #FDF5E6;
+  padding: 20px;
+  text-align: center;
+}

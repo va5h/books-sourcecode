@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<!-- saved from url=(0014)about:internet -->
+
+<head>
+<title>DHTML</title>
+<script>
+  // The current font size.
+  var size = 10
+  // The amount the font size is changing.
+  var growIncrement = 2
+
+  function ChangeFont() {
+    // Find the object that represents the paragraph.
+    var paragraph = document.getElementById("animatedParagraph")
+
+    // Change the font size.
+    size = size + growIncrement
+    paragraph.style.fontSize = size + "px"
+
+    // Decide whether to reverse direction from
+    // growing to shrinking (or vice versa).
+    if (size > 100) {
+       paragraph.innerHTML = "This Text is Shrinking"
+       growIncrement = -2
+    }
+    if (size < 10) {
+       paragraph.innerHTML = "This Text is Growing"
+       growIncrement = 2
+    }
+    setTimeout("ChangeFont()", 100)
+  }
+</script>
+</head>
+
+<body>
+<p id="animatedParagraph">This Text is Growing</p>
+<script>
+  ChangeFont()
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<!-- saved from url=(0014)about:internet -->
+
+<head>
+<title>Image Rollover</title>
+
+<script>
+  function ChangeImage(imageName, newImageFile) {
+    // Find the object that represents the img element.
+    var image = document.getElementById(imageName)
+
+    // Change the picture.
+    image.src = newImageFile
+  }
+</script>
+</head>
+<body>
+
+<p>
+<img id="SwappableImage" src="pic1.gif" onmouseover="ChangeImage('SwappableImage', 'pic2.gif')" alt=""
+onmouseout="ChangeImage('SwappableImage', 'pic1.gif')" />
+</p>
+</body>
+
+</html>

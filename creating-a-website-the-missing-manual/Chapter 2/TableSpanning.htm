@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+<title>Spanning</title>
+<style>
+table {
+  width: 100%;
+}
+td {
+  border-style: solid;
+  border-width: 1px;
+  padding: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<table width="100%">
+	<tr>
+		<td>Column 1</td>
+		<td>Column 2</td>
+		<td>Column 3</td>
+		<td>Column 4</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td colspan="2">Look out, this cell spans two columns!</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td rowspan="2">This cell spans two rows.</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td colspan="2" rowspan="2">And this cell gobbles a grid of four cells.</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

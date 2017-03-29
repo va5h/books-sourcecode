@@ -1,0 +1,64 @@
+body {
+  font-family: "Trebuchet MS", serif;
+  margin: 0px;
+}
+
+.Header {
+  padding: 15px;
+}
+
+.Header h1 {
+  margin: 0px;
+  font-size: xx-large;
+}
+
+.Header p {
+  margin: 5px 0px;
+}
+
+div {
+  font-size: small;
+}
+
+.LeftPanel {
+  position: absolute;
+  left: 0px;
+  width: 100px;
+  padding: 15px;
+}
+
+.MiddlePanel {
+  position: absolute;
+  left: 120px;
+  width: 450px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-style: solid;
+  border-color: blue;
+  padding: 15px;
+}
+
+.RightPanel {
+  position: absolute;
+  left: 605px;
+  width: 150px;
+  padding: 15px;
+}
+
+@media (max-width: 600px) {
+  /* Override the styles for sub-600 pixel windows. */
+.LeftPanel, .RightPanel, .MiddlePanel {
+  width: auto;
+  position: static;
+  margin: 15px;
+  border: 1px solid gray;
+}
+
+.MiddlePanel {
+  border: none;
+}
+
+
+}

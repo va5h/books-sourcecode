@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+<!-- saved from url=(0014)about:internet -->
+
+<head>
+<title>Collapsible List</title>
+
+<script>
+  function ToggleVisibility(image, element){
+    // Find the image.
+    var image = document.getElementById(image)
+    
+    // Find the element to hide/unhide.
+    var element = document.getElementById(element)
+
+    // Check the element's current state.
+    if (element.style.display == "none"){
+      // If hidden, unhide it.
+      element.style.display = "block"
+      image.src = "open.png"
+    }
+    else
+    {
+      // If not hidden, hide it.
+      element.style.display = "none"
+      image.src = "closed.png";
+    }
+  }
+</script>
+
+<style>
+.indent
+{
+margin-left: 15px;
+}
+</style>
+</head>
+
+<body>
+
+  <div onclick="ToggleVisibility('Question1Image','HiddenAnswer1')">
+  <p>
+  <img id="Question1Image" src="closed.png" alt=""/>
+  <b>Where has all the information gone?</b>
+  </p>
+  </div>
+  <p id="HiddenAnswer1" class="indent">Now you've found it. We've decided to hide parts of the
+  page in these neat little collapsible sections. That way you won't see everything at once, panic,
+  and do something drastic.</p>
+
+  <div onclick="ToggleVisibility('Question2Image','HiddenAnswer2')">
+  <p>
+  <img id="Question2Image" src="closed.png" alt="" />
+  <b>Can I read more than one answer at a time?</b>
+  </p>
+  </div>
+  <p id="HiddenAnswer2" class="indent">You can expand as many or as few sections as you want.
+  Once you've expanded a section, just click again to collapse it back up out of sight. The only
+  rule is that when you leave this page and come back later, everthing will be hidden all over
+  again. That's just the way JavaScript and DHTML work.</p>
+ 
+<script>
+// Hide all sections, one by one.
+ToggleVisibility('Question1Image','HiddenAnswer1')
+ToggleVisibility('Question2Image','HiddenAnswer2')
+</script>
+
+</body>
+
+</html>

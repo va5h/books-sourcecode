@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Picture Wrapped</title>
+
+  <style>
+img.FloatLeft {
+  float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+} 
+img.FloatRight {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+} 
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<p><img alt="" src="food.jpg" class="FloatLeft" />
+If you place a floating image at the beginning of a paragraph, it
+floats in the top-left corner, with the text wrapped along the right
+edge. If the text extends beyond the end of the picture, it wraps
+underneath.<br style="clear: both;"/></p>
+<p>In this example, the floating image is inserted right after this
+sentence.<img alt="" src="food.jpg" class="FloatLeft" /> It still
+floats in the top-left corner, but the text before it wraps above
+the picture. You still get the same wrapping after the image.
+<br style="clear: both;"/></p>
+<p><img alt="" src="food.jpg" class="FloatRight" />
+You can use the same technique to create a floating image on the
+right side of a paragraph. Just set the float property to right.
+Now it's lined up with the right side of the page.</p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+﻿body {
+  font-family: Georgia,serif;
+  font-size: 18px;
+  margin: 10px 30px;
+}
+
+p {
+  text-align: justify;
+}
+
+img {
+  float: left;
+  margin: 3px 15px 7px 0px;
+  border: solid white 1px;
+}
+
+/* The shaded site header */
+h1 {
+  background-color: #761C00;
+  margin: 0px;
+  padding: 20px;
+  
+  color: white;
+  text-align: center;
+  
+  border-style: solid;
+  border-width: 0 0 1px 0;
+}
+
+/* The introduction text. */
+p.intro {
+  margin-bottom: 40px;
+  color: #9C9C9C;
+}
+
+/* The review title */
+h2.reviewTitle {
+  margin-top: 0px;
+  font-size: 100%;
+  color: #761C00;
+  margin-bottom: 0px;
+}
+
+/* The review byline */
+p.byline {
+  font-size: 12px;
+  font-style: italic;
+  border-style: outset;
+  border-width: 0 0 1px 0;
+  margin: 5px 0 5px 0;
+}
+
+/* The review summary text */
+p.review {
+  font-size: 16px;
+  margin: 15px;
+}
+
+/* The link at the end of the review summary */
+p.reviewEnd {
+  font-size: 16px;
+  font-style: italic;
+  text-align: right;
+  margin-bottom: 0px;
+  clear: both;
+}

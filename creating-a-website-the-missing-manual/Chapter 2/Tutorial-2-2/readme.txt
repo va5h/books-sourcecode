@@ -1,0 +1,1 @@
+This example is for the "Sharpen Up" sidebar on page 56.

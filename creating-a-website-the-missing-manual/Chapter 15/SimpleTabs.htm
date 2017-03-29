@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+<!-- saved from url=(0014)about:internet -->
+
+<head>
+<title>Collapsible Tabs</title>
+
+ <script>
+  function MakeVisible(tab, element){   
+    // Hide all menus.
+    ResetAllMenus()
+
+    // Update the tab's background.
+    tab.style.background = "lightyellow"
+    tab.style.borderBottomWidth = "0px"
+
+    // Find the element and unhide it.
+    var element = document.getElementById(element)
+    element.style.display = "block"
+  }
+
+
+  function ResetAllMenus() {
+    var tabs = document.getElementsByTagName("span")
+    for (var j = 0; j < tabs.length; j++) {
+      if (tabs[j].className == "Tab") {
+        tabs[j].style.background = "white"
+        tabs[j].style.borderBottomWidth = "1px"
+      }
+    }   
+    var links = document.getElementsByTagName("div")
+    for (var j = 0; j < links.length; j++) {
+      if (links[j].className == 'Links') links[j].style.display = "none"
+    } 
+  }
+</script>
+
+<style>
+  .TabGroup
+  {
+    position: absolute;
+    top: 16px;
+    left: 10px;
+  }
+  .Tab {
+    cursor: hand;
+    font-weight: bold;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+  }
+  .Links {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    background-color: lightyellow;
+    font-size: small;
+    border-top-color: LightGrey;
+
+    display: none;
+  }
+  .Links a {
+    margin-right: 5px;
+  }
+  body {
+    font-family: Veranda, sans-serif;
+  }
+
+  .MainBody {
+    margin-top: 70px;
+    margin-left: 15px;
+  }
+</style>
+</head>
+
+<body>
+<div class="TabGroup">
+  <span class="Tab" onmouseover="MakeVisible(this, 'AboutMe')">About Me</span>
+  <span class="Tab" onmouseover="MakeVisible(this, 'MyStore')">My Store</span>
+  <span class="Tab" onmouseover="MakeVisible(this, 'ReallyCoolStuff')">Really Cool Stuff</span>
+</div>
+  <div id="AboutMe" class="Links">
+    <a href="about:blank">My Traumatic Childhood</a>
+    <a href="about:blank">My Education</a>
+    <a href="about:blank">Painful Episodes</a>
+  </div>
+  <div id="MyStore" class="Links">
+    <a href="about:blank">Buy Something</a>
+    <a href="about:blank">Request a Refund</a>
+    <a href="about:blank">File a Complaint</a>
+  </div>  
+  <div id="ReallyCoolStuff" class="Links">
+    <a href="about:blank">Pie Eating</a>&nbsp;
+    <a href="about:blank">Harvesting Bananas</a>
+    <a href="about:blank">Blindfolded Heart Surgery</a>
+  </div>  
+  
+<div class="MainBody" onmouseover="ResetAllMenus()">
+<p>This content goes under the menu.</p>
+<p>When the menu is displayed, it will appear overtop of this content,
+potentially obscuring some of it. (That's the idea behind floating menus.)</p>
+</div>
+ 
+ 
+
+</body>
+
+</html>

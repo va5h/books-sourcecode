@@ -1,0 +1,30 @@
+body {
+  font-family: "Trebuchet MS", serif;
+  margin: 0px;
+}
+
+.Header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background: #6F4D8F;
+  color: white;
+  border-bottom: 3px solid #351456;
+  padding: 15px 15px 0px 15px;
+}
+
+.Header h1 {
+  margin: 0px;
+  font-size: xx-large;
+}
+
+.BodyContainer {
+  margin-top: 80px;
+
+  padding: 20px 70px;
+}
+
+div {
+  font-size: small;
+}
+

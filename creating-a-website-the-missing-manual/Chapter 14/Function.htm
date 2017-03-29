@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<!-- saved from url=(0014)about:internet -->
+
+<head>
+  <title>JavaScript Test</title>
+<script>
+  function ShowAlertBox(customMessage)
+  {
+    // Get the date.
+    var currentDate = new Date()
+
+    // Build the full message.
+    var fullMessage = "** IMPORTANT BULLETIN **\n\n"
+    fullMessage += customMessage + "\n\n"
+    fullMessage += "Generated at: " + currentDate.toTimeString() + "\n"
+    fullMessage += "This message courtesy of MagicMedia Inc."
+    
+    // Show the message.
+    alert(fullMessage)
+  }
+</script>
+
+<script>
+  function MultiplyNumbers(numberA, numberB)
+  {
+    return numberA * numberB
+  }
+</script>
+
+</head>
+
+<body>
+
+<h1>What Day Is It?</h1>
+<p>This page uses JavaScript.</p>
+<p>
+Right now it is:
+<script>  
+ShowAlertBox("This Web page includes JavaScript functions.")
+</script>
+</p>
+  
+<p>The sum product of 3202 and 23405 is
+<script>
+  var product = MultiplyNumbers(3202, 23405)
+  document.write(product)
+</script>
+</p>
+</body>
+
+</html>

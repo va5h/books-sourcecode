@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Sizing</title>
+<style>
+body {
+  font-family: "Trebuchet MS", serif;
+  background: #EADCAE;
+}
+
+div.Header h1 {
+  margin: 0px;
+  font-size: xx-large;
+}
+
+div {
+  font-size: small;
+  padding: 15px;
+}
+div.Left {
+  float: left;
+  width: 100px;
+}
+div.Middle {
+  float: left;
+  width: 450px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-style: solid;
+  border-color: blue;
+  padding-top: 0px;
+}
+div.Right {
+  float: left;
+  width: 100px;
+  font-weight: bold;
+}
+div.Body {
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  height: 225px;
+}
+</style>
+
+</head>
+
+<body>
+
+  <div class="Body">
+
+    <div class="Header">
+      <h1>The Joy Of Styles</h1>
+    </div>
+
+    <div class="Left"><a href="RelativeSizing.htm">Relative Sizing</a><br />
+        <a href="AbsoluteSizing.htm">Absolute Sizing</a><br />
+        <a href="mailto:no-one">Contact Me</a><br />&nbsp;</div>
+    <div class="Middle">
+        <p>An expandable middle might not be 
+	what I want. In some browser windows, the middle panel 
+	is squashed too small.</p><p>Instead, I've decided to lock 
+	my middle panel into a fixed size. That way, I know 
+	exactly how the layout should look.</p>
+
+    </div>
+    <div class="Right">Donate to my untraceable Swiss Bank account 
+    <a href="http://www.paypal.org">now</a>!
+    </div>
+
+  </div>
+
+</body>
+
+</html>

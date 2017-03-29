@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+<!-- saved from url=(0014)about:internet -->
+
+<head>
+  <title>Fancy Buttons</title>
+  <style>
+    /* Position the menu sidebar. */
+    .MenuBar {
+      position: fixed; 
+      top: 20px;
+      left: 0px;
+      margin: 15px; 
+    }
+
+    /* Choose a font for the whole page. */
+    body {
+      font-family: Verdana,sans-serif;
+      font-size: small;
+    }
+
+    /* Turn all the links in the menu into buttons. */
+    .MenuBar a {
+      display: block;
+      text-decoration: none;
+
+      width: 115px;
+      height: 18px;
+
+      margin-bottom: 5px;
+      padding-top: 5px;
+      padding-left: 7px;
+
+      background-repeat: no-repeat;
+    }
+
+    /* The rollover effect. */
+    .MenuBar a:hover {
+      background-position: 0 -23px;
+    }
+
+    .MainContent
+    {
+       margin-left: 165px;
+       margin-top: 30px;
+       margin-right: 20px;
+    }
+  </style>
+ 
+</head>
+
+<body>
+
+<div class="MenuBar">
+    <a href="." style="background-image: url('DogsButton.png')"> </a>
+    <a href="." style="background-image: url('CatsButton.png')"> </a>
+    <a href="." style="background-image: url('LemursButton.png')"> </a>
+</div>
+
+<div class="MainContent">
+  <h1>Welcome.</h1>
+  <p>This page uses rollover buttons in a basic two-column layout (see Chapter 10). CSS is the glue that holds everything together. It creates the rollover effect and the page layout.</p>
+  <p>You could also reuse these buttons on several pages with templates or the server-side include feature (Chapter 10).</p>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+  <title>Fancy Buttons</title>
+  <link rel="stylesheet" href="sdmenu/sdmenu.css" />
+  <script src="sdmenu/sdmenu.js"></script>
+  <script>
+	// <![CDATA[
+	var myMenu;
+	window.onload = function() {
+		myMenu = new SDMenu("my_menu");
+		myMenu.init();
+	};
+	// ]]>
+  </script>
+
+  <style>
+    /* Position the menu sidebar. */
+    .MenuBar {
+      position: absolute; 
+      top: 20px;
+      left: 0px;
+      margin: 15px; 
+    }
+
+    /* Choose a font for the whole page. */
+    body {
+      font-family: Verdana,sans-serif;
+      font-size: small;
+    }
+
+    .MainContent
+    {
+       margin-left: 180px;
+       margin-top: 30px;
+       margin-right: 20px;
+    }
+  </style>
+ 
+</head>
+
+<body>
+
+<div class="MenuBar">
+  <div class="sdmenu" id="my_menu">
+
+  <div>
+    <span>About Me</span>
+    <a href="about:blank">My Traumatic Childhood</a>
+    <a href="about:blank">My Education</a>
+    <a href="about:blank">Painful Episodes</a>
+  </div>
+  <div>
+    <span>My Store</span>
+    <a href="about:blank">Buy Something</a>
+    <a href="about:blank">Request a Refund</a>
+    <a href="about:blank">File a Complaint</a>
+  </div>  
+  <div>
+    <span>Really Cool Stuff</span>
+    <a href="about:blank">Pie Eating</a>
+    <a href="about:blank">Harvesting Bananas</a>
+    <a href="about:blank">Blindfolded Heart Surgery</a>
+  </div>  
+
+  </div>
+</div>
+
+<div class="MainContent">
+  <h1>Welcome.</h1>
+  <p>This page uses the Slashdot menu in a basic two-column layout (see Chapter 10). CSS and JavaScript is the glue that holds everything together.</p>
+  <p>If you go to the trouble of creating a beautiful menu like this, you need to use it on multiple pages. You can use templates or the server-side include feature to do so (Chapter 10).</p>
+</div>
+</body>
+
+</html>

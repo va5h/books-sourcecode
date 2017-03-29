@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+<title>Combining Absolute and Relative Positioning</title>
+<style>
+div.GraveContainer {
+  position: relative;
+  height: 250px;
+}
+
+p.GraveText {
+  position: absolute;
+  top: 60px;
+  left: 115px;
+  color: white;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+  font-family: Georgia;
+}
+
+</style>
+</head>
+
+<body>
+
+<div>
+  <p>Here is some ordinary content. Whatever you put here
+  bumps the grave stone box further down the page.</p>
+</div>
+
+<div class="GraveContainer">
+  <img alt="Tombstone" src="tombstone.jpg" />
+  <p class="GraveText">Fatal error.<br />Please reboot.</p>
+</div>
+
+<div>
+  <p>Here is some more ordinary content.</p>
+</div>
+
+
+</body>
+
+</html>
