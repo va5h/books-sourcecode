@@ -1,0 +1,14 @@
+#
+# Sample config file
+#
+[monitor]
+http://www.foxnews.com;Fox News
+http://www.wnd.com/;WorldNetDaily
+
+[feeds]
+nntp://yellow.geeks.org
+
+[groups]
+comp.robotics.misc;camera;68HC11
+sci.space.moderated;mars;gemini
+sci.space.news;micro;satellite

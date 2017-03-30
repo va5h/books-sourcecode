@@ -1,0 +1,95 @@
+;
+; Define initial state of working memory (initial rule)
+;
+(defrule init
+	(true null)			; antecedent
+=>
+	(add (sensor-active none))	; consequents
+	(add (sensor-working sensor1))
+	(add (sensor-working sensor2))
+	(add (mode normal))
+	(enable (timer 1 10))
+	(disable (self))
+	(print ("default rule fired!"))
+)
+
+;
+; Define rule-set
+;
+
+(defrule sensor-working
+	(sensor-working ?)
+	(sensor-failed ?)
+=>
+	(delete (sensor-working ?))
+)
+
+(defrule none-active
+	(sensor-active ?)
+	(sensor-failed ?)
+=>
+	(delete (sensor-active ?))
+	(add (sensor-active none))
+)
+
+(defrule make-working
+	(sensor-active none)
+	(sensor-working ?)
+=>
+	(add (sensor-active ?))
+	(delete (mode failure))
+	(add (mode normal))
+	(delete (sensor-active none))
+)
+
+(defrule failure
+	(mode normal)
+	(sensor-active none)
+	(sensor-failed sensor1)
+	(sensor-failed sensor2)
+=>
+	(add (mode failure))
+	(delete (mode safe))
+	(delete (mode normal))
+)
+
+
+; Use triggers to simulate failures of sensors...
+(defrule trigger1
+	(timer-triggered 1)
+=>
+	(print ("Sensor 1 failure.\n"))
+	(add (sensor-failed sensor1))
+	(enable (timer 2 10))
+	(delete (timer-triggered 1))
+)
+
+(defrule trigger2
+	(timer-triggered 2)
+=>
+	(print ("Sensor 2 failure.\n"))
+	(add (sensor-failed sensor2))
+	(enable (timer 3 10))
+	(delete (timer-triggered 2))
+)
+
+(defrule trigger3
+	(timer-triggered 3)
+=>
+	(print ("Sensor 1 is now working.\n"))
+	(add (sensor-working sensor1))
+	(delete (sensor-failed sensor1))
+	(enable (timer 4 10))
+	(delete (timer-triggered 3))
+)
+
+(defrule trigger4
+	(timer-triggered 4)
+=>
+	(print ("Sensor 2 is now working.\n"))
+	(add (sensor-working sensor2))
+	(delete (sensor-failed sensor2))
+	(enable (timer 1 10))
+	(delete (timer-triggered 4))
+)
+
