@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>Y2K Map</title>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" href="https://js.arcgis.com/3.13/esri/css/esri.css" />
+	<link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">
+    	<link rel="stylesheet" href="css/y2k.css" />
+    	<script type="text/javascript">
+    	  dojoConfig = {
+    	    async: true,
+    	    packages: [
+    	      {
+		name: 'y2k',
+		location: location.pathname.replace(/\/[^\/]*$/, '') + '/js'
+	      },
+	      {
+                name: "d3",
+                location: "http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.12/"
+              },
+	      {
+                name: "bootstrap",
+                location: "http://rawgit.com/xsokev/Dojo-Bootstrap/master"
+	      }
+    	    ]
+    	  };
+    	</script>
+    	<script src="https://js.arcgis.com/3.13/"></script>
+
+    </head>
+    <body>
+	<nav class="navbar navbar-default">
+	    <div class="container-fluid">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		    <span class="sr-only">Toggle navigation</span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">Year 2000 Map</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    <button id="census-btn" class="btn btn-default navbar-btn">Census</button>
+		</div>
+	    </div>
+	</nav>
+	<div class="modal fade" id="census-widget"></div>
+    	<div id="map">
+
+	    <span class="footer">Courtesy of the Y2K Society</span>
+	</div>
+
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+
+html, body {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	font-size: 14px;
+}
+
+h1 {
+	margin: 2px 8px;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+#buttonbar {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	width: auto;
+	height: auto;
+}
+
+#mainwindow,
+#mainwindow .dijitSplitter {
+	background: #fffaa9;
+}
+
+#header {
+	background: #ffec50;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #6f6222;
+	
+}
+
+#footer {
+	background: #d0a921;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #6f6222;
+}
+
+.y2k-census {
+	position: absolute;
+	width: 150px;
+	top: 20px;
+	right: 20px;
+	z-index: 100;
+	height: auto;
+	background: white;
+	padding: 5px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.y2k-census-close {
+	font-weight: bold;
+	color: #ff2222;
+	cursor: pointer;
+	padding: 3px;
+	float: right;
+	font-size: 1.3em;
+}
+
+
+
+
+/*
+ * Darkest: #6f6222;
+ * footer: #d0a921;
+ * bold: #ffc81e;
+ * header: #ffec50;
+ * lightest: #fffaa9;
+ * 
+ */
+
+
+

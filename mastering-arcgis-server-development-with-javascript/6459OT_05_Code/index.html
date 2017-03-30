@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>Incident Reporting App</title>
+		<meta name="description" content="">
+		<meta name="author" content="Ken Doman">
+		<link rel="stylesheet" href="http://js.arcgis.com/3.13/dijit/themes/claro/claro.css">
+    	<link rel="stylesheet" href="https://js.arcgis.com/3.13/esri/css/esri.css" />
+    	<link rel="stylesheet" href="./css/style.css" />
+		<script type="text/javascript">
+    		dojoConfig = {
+    			async: true,
+    			isDebug: true
+    		};
+    	</script>
+    	<script src="https://js.arcgis.com/3.13/"></script>
+
+	</head>
+
+	<body class="claro">
+		<div id="mainwindow"
+		  data-dojo-type="dijit/layout/BorderContainer"
+		  data-dojo-props="design:'sidebar',gutter:false"
+		  style="width: 100%; height: 100%; margin: 0;">
+			<div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'">
+				<h1>Incident Reporting App</h1>
+			</div>
+			<div id="map" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'" >
+				<div id="locatebutton"></div>
+				<div id="outsidemessage" style="display:none;">
+					<p>Sorry, but you have navigated outside our city. Click on this message to get back to the city.</p>
+				</div>
+			</div>
+			<div id="editpane" style="width: 130px" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'leading'">
+				<div id="editordiv"></div>
+				<div id="blockerdiv" style="display:none;"></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>Incident Reporting App</title>
+		<meta name="description" content="">
+		<meta name="author" content="Ken Doman">
+		<!-- <link rel="stylesheet" href="https://js.arcgis.com/3.12/dijit/themes/claro/claro.css"> -->
+    <link rel="stylesheet" href="https://js.arcgis.com/3.13/esri/css/esri.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+		<script type="text/javascript">
+    	dojoConfig = {
+    		async: true,
+    		isDebug: true
+    	};
+    </script>
+    <script src="https://js.arcgis.com/3.13compact/"></script>
+
+	</head>
+
+	<body>
+
+
+
+		<div id="attributeview" data-dojo-type="dojox/mobile/View">
+			<h2 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Incident',moveTo:'incidentview'">Description</h2>
+
+			<div id="attributediv"></div>
+		</div>
+
+		<div id="incidentview" data-dojo-type="dojox/mobile/View">
+			<h2 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Map',moveTo:'mapview'">Incident</h2>
+			<div id="pickerdiv"></div>
+
+		</div>
+                <div id="mapview" data-dojo-type="dojox/mobile/View">
+			<h1 data-dojo-type="dojox/mobile/Heading">
+				Incident Reporting App
+				<span id='addbtn' data-dojo-type="dojox/mobile/ToolBarButton"
+					data-dojo-props='icon:"mblDomButtonWhitePlus"'
+					style="float:right;"></span>
+			</h1>
+			<div id="map" >
+
+			</div>
+		</div>
+
+		<script type="text/javascript" >
+                    require([
+  "dojo/parser",
+  "dojo/dom",
+  "dojo/dom-construct",
+  "dojo/dom-style",
+  "dojo/on",
+  "esri/config",
+  "esri/map",
+  "esri/graphic",
+  "esri/layers/FeatureLayer",
+  "esri/dijit/editing/Editor",
+  "esri/dijit/AttributeInspector",
+  "esri/tasks/query",
+  "dojox/mobile/Button",
+  "dojox/mobile/Button",
+  "dojox/mobile",
+  "dojox/mobile/deviceTheme",
+  "dojox/mobile/compat",
+  "dojox/mobile/View",
+  "dojox/mobile/Heading",
+  "dojox/mobile/ToolBarButton",
+  "dojox/mobile/SimpleDialog",
+  "dojox/mobile/RoundRect",
+  "dojox/mobile/TextBox",
+  "dojo/domReady!"
+], function (
+	parser, dojoDom, domConstruct, domStyle, dojoOn,
+	esriConfig, Map, Graphic,
+	FeatureLayer,
+	Editor, AttributeInspector,
+	Query, Button
+) {
+  var map, incidentLayer, visibleIncidentLayer, selected, updateFeature, attInspector, layerInfos;
+
+  parser.parse();
+
+  esriConfig.defaults.io.proxyUrl = "./proxy/proxy.ashx";
+
+  var map = new Map("map");
+
+  incidentLayer = new FeatureLayer("http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/SanFrancisco/311Incidents/FeatureServer/0", {
+    mode: FeatureLayer.MODE_SELECTION,
+    outFields: ["req_type","req_date","req_time","address","district","status"],
+    id: "incidentLayer"
+  });
+
+  function startEditing () {
+  	// add the Locate button
+
+  	var incidentLayer = map.getLayer("incidentLayer");
+  	generateAttributeInspector(incidentLayer);
+  	// add map click event to create the
+
+        showInspector();
+  }
+
+  function generateAttributeInspector(layer) {
+
+    layerInfos = [{
+      featureLayer: layer,
+      showAttachments: true,
+      isEditable: true,
+      showDeleteButton: false,
+      fieldInfos: [
+        {'fieldName': 'req_type', 'isEditable':true, 'tooltip': 'What\'s wrong?', 'label':'Status:'},
+        {'fieldName': 'req_date', 'isEditable':false, 'tooltip': 'Date incident was reported.', 'label':'Date:'},
+        {'fieldName': 'req_time', 'isEditable':false,'label':'Time:'},
+        {'fieldName': 'address', 'isEditable':true, 'label':'Address:'},
+        {'fieldName': 'district', 'isEditable':true, 'label':'District:'},
+        {'fieldName': 'status', 'isEditable':false, 'label':'Status:'}
+      ]
+    }]; //"","req_date","req_time","address","district","status"
+
+    attInspector = new AttributeInspector({
+  	layerInfos: layerInfos
+    }, document.getElementById("attributediv"));
+
+    attInspector.startup();
+
+  	//add a save button next to the delete button
+    var saveButton = new Button({ label: "Save", "class": "saveButton"});
+    domConstruct.place(saveButton.domNode, attInspector.deleteBtn.domNode, "after");
+
+  }
+
+  function showInspector() {
+  	var selectQuery = new Query();
+
+      selectQuery.where = "1=1";
+
+      incidentLayer.selectFeatures(selectQuery, FeatureLayer.SELECTION_NEW, function (features) {
+
+      });
+  }
+
+  map.on("layers-add-result", startEditing);
+
+  map.addLayers([incidentLayer]);
+
+
+
+});
+
+                </script>
+	</body>
+</html>

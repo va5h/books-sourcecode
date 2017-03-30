@@ -1,0 +1,49 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.mblView {
+	height: 100%;
+	overflow-y: hidden;
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+}
+
+.LocateButton {
+	position: absolute;
+	left: 21px;
+	top: 130px;
+	z-index: 500;
+}
+
+.saveButton {
+	margin: 0 0 0 48px;
+}
+
+#outsidemessage {
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	width: 200px;
+	height: auto;
+	margin: 0 0 0 -100px;
+	background: rgba(255,255,255,0.8);
+	padding: 8px;
+	z-index: 500;
+	border-radius: 8px;
+	text-align: center;
+	font-weight: bold;
+}

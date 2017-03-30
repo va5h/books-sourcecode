@@ -1,0 +1,34 @@
+<div class="${baseClass} modal fade" style="display: none;" data-backdrop="static">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+				<span class="modal-title">Census Data</span>
+			</div>
+			<div class="modal-body">
+				<p>
+					Click on a location in the United States to view the census data for that region.
+					You can also use the dropdown tools to select a State, County, or Blockgroup.
+				</p>
+				      
+				<div class="form-group" >
+				      <label class="control-label">State Selector: </label>
+				      <select class="form-control" data-dojo-attach-point='stateSelect' data-dojo-attach-event='change:_stateSelectChanged'></select>
+				</div>
+				      
+				<div class="form-group">
+				      <label class="control-label">County Selector: </label>
+				      <select class="form-control" data-dojo-attach-point='countySelect' data-dojo-attach-event='change:_countySelectChanged'></select>
+				</div>
+				     
+				<div class="form-group">
+				      <label class="control-label">Block Group Selector: </label>
+				      <select class="form-control" data-dojo-attach-point='blockGroupSelect' data-dojo-attach-event='change:_blockGroupSelectChanged'></select>
+				</div>	
+			</div>
+			<div class="modal-footer">
+				<button id="btnDismiss" type="button" class="btn btn-default" data-dismiss="modal">Dismiss</button>
+			</div>
+		</div>
+	</div>
+</div>

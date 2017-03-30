@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>Incident Reporting App</title>
+		<meta name="description" content="">
+		<meta name="author" content="Ken Doman">
+		<!-- <link rel="stylesheet" href="https://js.arcgis.com/3.12/dijit/themes/claro/claro.css"> -->
+    <link rel="stylesheet" href="https://js.arcgis.com/3.13/esri/css/esri.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+		<script type="text/javascript">
+    	dojoConfig = {
+    		async: true,
+    		isDebug: true
+    	};
+    </script>
+    <script src="https://js.arcgis.com/3.13compact/"></script>
+
+	</head>
+
+	<body>
+		<div id="mapview" data-dojo-type="dojox/mobile/View">
+			<h1 data-dojo-type="dojox/mobile/Heading">
+				Incident Reporting App
+				<span id='addbtn' data-dojo-type="dojox/mobile/ToolBarButton"
+					data-dojo-props='icon:"mblDomButtonWhitePlus"'
+					style="float:right;"></span>
+			</h1>
+			<div id="map" >
+			<div id="locatebutton"></div>
+
+			</div>
+		</div>
+
+		<div id="incidentview" data-dojo-type="dojox/mobile/View">
+			<h2 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Map',moveTo:'mapview'">Incident</h2>
+			<div id="pickerdiv"></div>
+
+		</div>
+
+		<div id="attributeview" data-dojo-type="dojox/mobile/View">
+			<h2 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Incident',moveTo:'incidentview'">Description</h2>
+			<div data-dojo-type="dojox/mobile/RoundRect">
+				<label>Request Type:</label>
+				<select data-dojo-type="dijit/form/DataList"
+					data-dojo-props='id:"incidentDataList"'>
+						<option>Graffiti Complaint</option>
+						<option>Blocked Street or Sidewalk</option>
+						<option>Damaged Property</option>
+						<option>Sewer Issues</option>
+						<option>Tree Maintenance or Damage</option>
+						<option>Sidewalk and Curb Issues</option>
+				</select>
+				<input type="text" data-dojo-type="dojox/mobile/ComboBox"
+					data-dojo-props='list:"incidentDataList",id:"incidentSelector"'>
+				<br />
+				<label>Date:</label>
+				<span id="incidentDate"></span>
+				<br />
+				<label>Time:</label>
+				<span id="incidentTime"></span>
+				<br />
+				<label>Address:</label>
+				<input type="text" data-dojo-type="dojox/mobile/TextBox"
+					data-dojo-props='id:"incidentAddress"' />
+				<br />
+				<label>District:</label>
+				<input type="text" data-dojo-type="dojox/mobile/TextBox"
+					data-dojo-props='id:"incidentDistrict"' />
+				<br />
+				<label>Status: </label>
+				<span id="incidentStatus"></span>
+				<br />
+				<button data-dojo-type="dojox/mobile/Button"
+					data-dojo-props="id:'saveButton'">Save</button>
+			</div>
+			<div id="attributediv"></div>
+		</div>
+
+		<div id="outsidemessage" data-dojo-type="dojox/mobile/SimpleDialog" data-dojo-props='closeButton:true'>
+			<div class="mblSimpleDialogTitle">
+				Navigation Error
+			</div>
+			<p class="mblSimpleDialogText">
+				Sorry, but you have navigated outside our city. Closing this window will navigate you back in town.
+			</p>
+		</div>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>

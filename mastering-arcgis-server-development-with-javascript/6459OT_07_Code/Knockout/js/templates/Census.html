@@ -1,0 +1,32 @@
+<div class="${baseClass}" style="display: none;">
+  <span class="${baseClass}-close" data-dojo-attach-event="ondijitclick:hide">X</span>
+  <b>Census Data</b><br />
+  <p>
+    Click on a location in the United States to view the census data for that region.
+    You can also use the dropdown tools to select a State, County, or Blockgroup.
+  </p>
+
+  <div >
+    <b>State Selector: </b>
+    <select data-bind="options: stateList,
+                       optionsText: 'STATE_NAME',
+		       value: selectedState,
+		       stateUpdate: selectedState"></select>
+  </div>
+  
+  <div>
+    <b>County Selector: </b>
+    <select data-bind="options: countyList,
+                       optionsText: 'NAME',
+		       value: selectedCounty,
+		       countyUpdate: selectedCounty"></select>
+  </div>
+
+  <div>
+    <b>Block Group Selector: </b>
+    <select data-bind="options: blockGroupList,
+                       optionsText: 'BLKGRP',
+		       value: selectedBlockGroup,
+		       blockGroupUpdate: selectedBlockGroup"></select>
+  </div>	
+</div>

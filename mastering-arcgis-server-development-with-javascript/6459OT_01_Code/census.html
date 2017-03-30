@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+	    <title>Census Map</title>
+    	<link rel="stylesheet" href="http://js.arcgis.com/3.13/esri/css/esri.css">
+		<style>
+			html, body, #map {
+				border: 0;
+				margin: 0;
+				padding: 0;
+				height: 100%;
+			}
+			.instructions {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 25%;
+				height: auto;
+				z-index: 100;
+				border-radius: 0 0 0 8px;
+				background: white;
+				padding: 0 5px;
+			}
+			h1 {
+				text-align: center;
+				margin: 4px 0;
+			}
+		</style>
+        <script type="text/javascript">
+        	dojoConfig = {
+        		parseOnLoad: true,
+        		isDebug: true
+        	};
+        </script>
+		<script src="http://js.arcgis.com/3.13/"></script>
+    </head>
+    <body>
+    	<div class="instructions">
+    		<h1>U.S. Census for 2000</h1>
+    		<p>Click on the map to view census data for the state, census tract, and block.</p>
+    	</div>
+    	<div id="map">
+
+    	</div>
+
+		<script type="text/javascript">
+			require([
+				"esri/map",
+				"esri/layers/ArcGISDynamicMapServiceLayer",
+				"esri/tasks/IdentifyParameters",
+				"esri/tasks/IdentifyTask",
+				"esri/InfoTemplate",
+				"dojo/_base/array",
+				"dojo/domReady!"
+			], function (
+				Map, ArcGISDynamicMapServiceLayer,
+				IdentifyParameters, IdentifyTask, InfoTemplate,
+				arrayUtils
+			) {
+				var censusUrl = "http://sampleserver6.arcgisonline.com/arcgis/rest/services/Census/MapServer/",
+					map = new Map("map", {
+						basemap: "national-geographic",
+						center: [-95, 45],
+						zoom: 3
+					}),
+					layer = new ArcGISDynamicMapServiceLayer(censusUrl),
+					iTask = new IdentifyTask(censusUrl);
+
+				function onIdentifyComplete (results) {
+					return arrayUtils.map(results, function (result) {
+						var feature = result.feature,
+							title = result.layerName,
+							content;
+
+						switch(title) {
+							case "Census Block Points":
+								content = "Population: ${POP2000}<br />Households: ${HOUSEHOLDS}<br />Housing Units: ${HSE_UNITS}";
+								break;
+							default:
+								content = "${*}";
+						}
+
+						feature.infoTemplate = new InfoTemplate(title, content);
+						return feature;
+					});
+				}
+
+				function onMapClick (event) {
+					var params = new IdentifyParameters(),
+						defResults;
+
+					params.geometry = event.mapPoint;
+					params.layerOption = IdentifyParameters.LAYER_OPTION_ALL;
+					params.mapExtent = map.extent;
+					params.returnGeometry = true;
+					params.width = map.width;
+					params.height= map.height;
+					params.spatialReference = map.spatialReference;
+					params.tolerance = 3;
+
+					defResults = iTask.execute(params).addCallback(onIdentifyComplete);
+					map.infoWindow.setFeatures([defResults]);
+				    map.infoWindow.show(event.mapPoint);
+
+				}
+
+				function onMapLoad() {
+					map.on("click", onMapClick);
+				}
+
+				map.addLayer(layer);
+
+				if (map.loaded) {
+					onMapLoad();
+				} else {
+					map.on("load", onMapLoad);
+				}
+
+			});
+		</script>
+    </body>
+</html>

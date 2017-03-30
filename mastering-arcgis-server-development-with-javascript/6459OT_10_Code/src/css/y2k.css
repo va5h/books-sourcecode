@@ -1,0 +1,54 @@
+
+html, body {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	font-size: 14px;
+}
+
+
+#map {
+	position: absolute;
+	top: 50px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: rgba(255,255,255,0.5);
+	z-index: 100;
+}
+/* New */
+.show-numeric .for-text,
+.show-text .for-numeric {
+	display: none;
+}
+
+/*
+ * Darkest: #6f6222;
+ * footer: #d0a921;
+ * bold: #ffc81e;
+ * header: #ffec50;
+ * lightest: #fffaa9;
+ * 
+ */
+
+.censusages > div {
+	background: #12af12;
+	color: white;
+	font-size: 0.9em;
+	line-height: 1.5;
+}
+.censusages > div:nth-child(even) {
+	background: #64ff64;
+	color: #222;
+	margin: 1px 0;
+}
+
+
