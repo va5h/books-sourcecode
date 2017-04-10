@@ -1,0 +1,17 @@
+{
+  "name": "buildfirst-ci-by-example",
+  "version": "0.1.0",
+  "homepage": "https://github.com/buildfirst/ci-by-example",
+  "author": {
+    "name": "Nicolas Bevacqua",
+    "email": "buildfirst@bevacqua.io",
+    "url": "http://bevacqua.io/buildfirst"
+  },
+  "keywords": [
+    "buildfirst"
+  ],
+  "devDependencies": {
+    "grunt": "0.4.1",
+    "grunt-contrib-jshint": "0.6.4"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "buildfirst",
+  "version": "0.1.0",
+  "homepage": "https://github.com/buildfirst/buildfirst",
+  "author": {
+    "name": "Nicolas Bevacqua",
+    "email": "buildfirst@bevacqua.io",
+    "url": "http://bevacqua.io/buildfirst"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/buildfirst/buildfirst.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.5",
+    "gulp-header": "^1.0.2",
+    "gulp-size": "^0.4.0",
+    "gulp-uglify": "^0.3.1"
+  }
+}
